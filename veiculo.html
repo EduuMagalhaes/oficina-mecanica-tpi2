@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/veiculo.js" defer></script>
+    <title>Oficina Mecânica - Veículos</title>
+</head>
+
+<body>
+    <header>
+        <h1>Oficina Mecânica</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cliente.html">Clientes</a></li>
+            <li><a href="veiculo.html" class="ativo">Veículos</a></li>
+            <li><a href="mecanico.html">Mecânicos</a></li>
+            <li><a href="peca.html">Peças</a></li>
+            <li><a href="os.html">Ordem de Serviço</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Cadastro de Veículo</h2>
+        <form id="form-veiculo">
+            <label for="placa">Placa:</label>
+            <input type="text" id="placa" name="placa" placeholder="ABC1D23 ou ABC1234" maxlength="7" required>
+            <label for="marca">Marca:</label>
+            <input type="text" id="marca" name="marca" placeholder="Ex.: Fiat" required>
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" name="modelo" placeholder="Ex.: Uno" required>
+            <label for="ano">Ano:</label>
+            <input type="number" id="ano" name="ano" min="1950" placeholder="Ex.: 2015" required>
+            <label for="quilometragem">Quilometragem:</label>
+            <input type="number" id="quilometragem" name="quilometragem" min="0" placeholder="Ex.: 85000" required>
+            <label for="cliente">Cliente (dono):</label>
+            <input type="text" id="cliente" name="cliente" placeholder="Nome do cliente" required>
+            <button>Cadastrar</button>
+        </form>
+        <div id="mensagem"></div>
+        <a class="voltar" href="index.html">Voltar à página inicial</a>
+    </main>
+</body>
+
+</html>
