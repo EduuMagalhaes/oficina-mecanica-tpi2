@@ -1,4 +1,12 @@
 <?php
+$db = [
+    "cliente" => [],
+    "veiculo" => [],
+    "mecanico" => [],
+    "peca" => [],
+    "os" => []
+];
+
 function validarCPF($cpf) {
     $cpf = preg_replace("/\D/", "", $cpf);
     return strlen($cpf) === 11;
@@ -30,6 +38,18 @@ function validarNumeroNaoNegativo($valor) {
 
 function validarAnoVeiculo($ano) {
     return is_numeric($ano) && $ano >= 1950 && $ano <= date("Y") + 1;
+}
+
+
+//Logica simula a verificação de existência no banco de dados
+function existeNoBanco($tipo, $dados) {
+    global $db;
+    foreach ($db[$tipo] as $item) {
+        if ($item === $dados) {
+            return true;
+        }
+    }
+    return false;
 }
 
 function responderJSON($sucesso, $mensagem) {
