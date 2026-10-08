@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/os.js" defer></script>
+    <title>Oficina Mecânica - Ordem de Serviço</title>
+</head>
+
+<body>
+    <header>
+        <h1>Oficina Mecânica</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cliente.html">Clientes</a></li>
+            <li><a href="veiculo.html">Veículos</a></li>
+            <li><a href="mecanico.html">Mecânicos</a></li>
+            <li><a href="peca.html">Peças</a></li>
+            <li><a href="os.html">Ordem de Serviço</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Abertura de Ordem de Serviço</h2>
+        <form id="form-os">
+            <label for="veiculo">Veículo (placa):</label>
+            <input type="text" id="veiculo" name="veiculo" placeholder="ABC1D23 ou ABC1234" maxlength="7" required>
+            <label for="mecanico">Mecânico responsável:</label>
+            <input type="text" id="mecanico" name="mecanico" placeholder="Nome do mecânico" required>
+            <label for="entrada">Data de entrada:</label>
+            <input type="date" id="entrada" name="entrada" required>
+            <label for="previsao">Previsão de entrega:</label>
+            <input type="date" id="previsao" name="previsao" required>
+            <label for="defeito">Defeito relatado:</label>
+            <textarea id="defeito" name="defeito" rows="4" placeholder="Descreva o problema" required></textarea>
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="Aberta" selected>Aberta</option>
+                <option value="Em andamento">Em andamento</option>
+                <option value="Aguardando peça">Aguardando peça</option>
+                <option value="Concluída">Concluída</option>
+            </select>
+            <button>Abrir OS</button>
+        </form>
+        <div id="mensagem"></div>
+        <a class="voltar" href="index.html">Voltar à página inicial</a>
+    </main>
+</body>
+
+</html>
